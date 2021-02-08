@@ -1,0 +1,41 @@
+import { createWebHistory, createRouter } from "vue-router";
+import Home from "../views/home.vue";
+import LoginRegister from "../views/login-register.vue";
+import ViewPost from "../views/view-post.vue";
+import ViewUserProfile from "../views/post-user-profile.vue";
+import EditUserPost from "../views/edit-post.vue";
+
+const routes = [
+  {
+    path: "/login",
+    name: "Login",
+    component: LoginRegister,
+  },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/view-post/:id",
+    name: "ViewPost",
+    component: ViewPost,
+  },
+  {
+    path: "/view-profile/:id",
+    name: "ViewUserProfile",
+    component: ViewUserProfile,
+  },
+  {
+    path: "/edit-post/:id",
+    name: "EditUserPost",
+    component: EditUserPost,
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
