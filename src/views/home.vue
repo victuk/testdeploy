@@ -187,7 +187,7 @@ export default {
         checkLogin() {
             if (localStorage.getItem('token') == null) {
                 alert('You need to login.');
-                location.assign('/login');
+                this.$router.push('/login');
             }
         },
         showPostUserProfile(key) {
