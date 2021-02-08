@@ -90,7 +90,7 @@ export default {
             editStatus: false,
             sidebar: 'links',
             userID2: '',
-            baseUrl: 'https://intense-temple-44969.herokuapp.com/'
+            baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
     },
     methods: {

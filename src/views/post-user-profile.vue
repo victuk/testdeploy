@@ -20,7 +20,7 @@ export default {
             usersName: '',
             usersEmail: '',
             usersStatus: '',
-            baseUrl: 'https://intense-temple-44969.herokuapp.com/'
+            baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
     },
     methods: {

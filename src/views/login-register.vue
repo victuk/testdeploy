@@ -73,7 +73,7 @@ export default {
             regsuccess: false,
             loginSuccess: false,
             loginform: true,
-            baseUrl: 'https://intense-temple-44969.herokuapp.com/'
+            baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
     },
     methods: {
