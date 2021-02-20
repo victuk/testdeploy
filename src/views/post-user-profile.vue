@@ -1,7 +1,7 @@
 <template>
     <div>
-        
-    <div class="p-20 m-20 bg-white text-center">
+        <Navbar></Navbar>
+    <div class=" mt-20 shadow m-2 p-2 md:p-20 md:m-20 bg-white text-center">
         <div v-once>{{ showSingleData() }}</div>
         <div class="py-2 font-bold text-lg">{{usersName}}</div>
         <div class="py-2 font-bold text-xs">{{usersEmail}}</div>
@@ -13,6 +13,9 @@
 </template>
 
 <script>
+
+import Navbar from '../components/navbar.vue'
+
 export default {
     data() {
         return {
@@ -22,6 +25,9 @@ export default {
             usersStatus: '',
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
+    },
+    components: {
+        Navbar
     },
     methods: {
         showSingleData() {

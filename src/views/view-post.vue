@@ -1,5 +1,6 @@
 <template>
-    <div class="mt-8 text-center bg-white m-20 p-2">
+<Navbar></Navbar>
+    <div class="mt-40 shadow border md:mt-10 text-center bg-white m-4 md:m-20 p-2">
         <div v-once>{{ showSingleData() }}</div>
 
         <div class="py-10 font-bold">{{bloghead}}</div>
@@ -8,6 +9,9 @@
 </template>
 
 <script>
+
+import Navbar from '../components/navbar.vue'
+
 export default {
     data() {
         return {
@@ -15,6 +19,9 @@ export default {
             blogbody:'',
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
+    },
+    components: {
+        Navbar
     },
     methods: {
         showSingleData() {

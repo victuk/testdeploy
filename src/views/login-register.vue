@@ -1,4 +1,5 @@
 <template>
+<Navbar></Navbar>
     <div class="overflow-auto">
         <div v-if="loginform" class="w-full">
             <div class="flex w-full overflow-auto">
@@ -56,6 +57,8 @@
 
 <script>
 
+import Navbar from '../components/navbar.vue'
+
 export default {
     data() {
         return{
@@ -75,6 +78,9 @@ export default {
             loginform: true,
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
+    },
+    components: {
+        Navbar
     },
     methods: {
         login() {

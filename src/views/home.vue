@@ -1,8 +1,9 @@
 <template>
+<Navbar></Navbar>
     <div v-once>{{ fetchPosts() }}</div>
     <div class="mt-8 flex fixed overflow-hidden w-full overflow-hidden bg-gray-200" style="height:32.5em!important">
-        <div class="w-64 text-center h-auto bg-gray-800 text-white">
-            <div v-show="sidebar == 'links'" class=" h-full flex flex-col mx-12 justify-center gap-y-4">
+        <div class=" md:w-64 md:block text-center h-auto bg-gray-800 text-white hidden">
+            <div v-show="sidebar == 'links'" class="h-full flex flex-col mx-12 justify-center gap-y-4">
                 <button @click="showProfile()" class="text-left font-bold">Profile</button>
             <!-- <button @click="showUsers()" class="text-left font-bold">Users</button> -->
             <button @click="logOut()" class="text-left font-bold">Log Out</button>
@@ -12,7 +13,7 @@
                     <button @click="resetSidebar()" class="p-1 rounded-full m-4">X</button>
                 </div>
                 
-                <div class="justify-center text-left px-4 overflow-auto flex flex-col gap-y-8 w-full" style="height:27em!important">
+                <div class="justify-center text-left px-4 overflow-auto flex flex-col :mdgap-y-8 w-full" style="height:27em!important">
                     
                     <div class="font-bold">Name: <br> <div class="font-thin">{{profileFullName}}</div></div>
                     <div class="font-bold">Email: <br> <div class="font-thin">{{ userProfile.email }}</div></div>
@@ -43,7 +44,7 @@
             
         </div>
         <div class="flex-auto overflow-auto">
-            <div class="mx-20 p-5 my-5 bg-white rounded shadow">
+            <div class="mx-4 md:mx-20 p-2 md:p-5 my-5 bg-white rounded shadow">
                 <div class="text-lg text-left sticky p-1">Post an article</div>
                 <div class="text-xs mt-2">Post Title</div>
                 <input type="text" class="w-full my-1 border shadow" v-model="postTitle">
@@ -53,9 +54,9 @@
                 <div v-if="postSuccess" class="text-xs bg-green-200 text-green-800">Post successful</div>
             </div>
            <div v-once> {{ checkLogin() }}</div> 
-            <div v-for="item in posts" :key="item.blogdetails._id">
+            <div v-for="item in posts.slice().reverse()" :key="item.blogdetails._id">
                 
-                <div  class="text-left mb-2 mx-20 hover:bg-blue-200 p-5 cursor-pointer rounded shadow bg-white">
+                <div  class="text-left mb-2 mx-4 md:mx-20 hover:bg-blue-200 p-2 md:p-5 cursor-pointer rounded shadow bg-white">
                     <div class="text-sm">
                         <div class="text-blue-800" @click="showPostUserProfile(item.blogdetails.userID)">{{ item.ownerName }}</div>
                         <div class="text-xs">{{ item.ownerEmail }}</div>
@@ -77,6 +78,8 @@
 </template>
 
 <script>
+import Navbar from '../components/navbar.vue'
+
 export default {
     data() {
         return {
@@ -92,6 +95,9 @@ export default {
             userID2: '',
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
+    },
+    components: {
+        Navbar
     },
     methods: {
         fetchPosts () {
