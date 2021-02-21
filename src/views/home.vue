@@ -122,7 +122,7 @@ export default {
                     
                         
                         
-                        const userDetails = {blogdetails: blog, nbbody: blog.blogBody.slice(0, 130) + "...more", ownerName: x.user.name.replace(',', ' '), ownerEmail:x.user.email};
+                        const userDetails = {blogdetails: blog, nbbody: blog.blogBody.slice(0, 130) + "...more", ownerName: x.user.name, ownerEmail:x.user.email};
                     this.posts.push(userDetails)
                   
                     
