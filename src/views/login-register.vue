@@ -22,7 +22,7 @@
         </div>
         <div v-if="!loginform" class="w-full overflow-auto">
             <div class="flex p-10 md:p-20 h-full overflow-auto">
-            <div class="m-20 mt-100 border ml-auto mr-auto p-10 bg-white rounded h-full mb-40 w-80 overflow-auto">
+            <div class="m-20 mt-100 border ml-auto mr-auto p-10 bg-white rounded h-full mb-40 w-full overflow-auto">
                 <div class="text-center my-2">Registration Form</div>
                 <div class="text-sm">Surname</div>
                 <input type="text" class="border rounded w-full shadow mb-4" v-model="regsname">
