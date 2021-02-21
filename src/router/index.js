@@ -4,6 +4,7 @@ import LoginRegister from "../views/login-register.vue";
 import ViewPost from "../views/view-post.vue";
 import ViewUserProfile from "../views/post-user-profile.vue";
 import EditUserPost from "../views/edit-post.vue";
+import ViewOwnProfile from "../views/view-own-profile.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/edit-post/:id",
     name: "EditUserPost",
     component: EditUserPost,
+  },
+  {
+    path: "/view-own-profile",
+    name: "ViewOwnProfile",
+    component: ViewOwnProfile,
   },
 ];
 
