@@ -5,7 +5,14 @@
         <div v-once>{{ showProfile() }}</div>
         <div class="py-2 font-bold text-lg">{{profileFullName}}</div>
         <div class="py-2 font-bold text-xs">{{userProfile.email}}</div>
-        <div class="text-sm text-gray-500 justify-center text-xl">{{userProfile.status}}</div>
+        <div v-if="!editStatus">
+                            <div class="font-bold">Status: <br> <div class="font-thin">{{ userProfile.status }}</div></div><br>
+                            <button class="bg-blue-800 p-2 shadow text-white rounded" @click="editStatus2()">Edit Status</button>
+                        </div>
+                        <div v-if="editStatus">
+                            <textarea class="text-black p-1 border shadow resize-none" v-model="userProfile.status"></textarea>
+                            <button class="my-4 bg-blue-800 p-2 shadow rounded text-white" @click="updateStatus2()">Update Status</button>
+                        </div>
 
     </div>
         
@@ -21,6 +28,7 @@ export default {
         return {
             userProfile: '',
             profileFullName: '',
+            editStatus: false,
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
     },
@@ -44,6 +52,27 @@ export default {
             })
             .catch(err => console.log(err));
 
+        },
+        editStatus2() {
+            this.editStatus = true;
+        },
+        updateStatus2() {
+
+            fetch(`${this.baseUrl}/users/edit-status`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    token: localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    updateStatus: this.userProfile.status
+                })  
+            }).then(res => res.json())
+                .then(x => {
+                    this.editStatus = false;
+                }).catch(err => {
+                    console.log(err)
+                })
         }
     }
 }
