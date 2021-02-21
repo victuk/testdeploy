@@ -204,7 +204,7 @@ export default {
         },
         logOut() {
             localStorage.removeItem('token');
-            location.assign('/login');
+            this.$router.replace('login');
         },
         updateStatus2() {
 
@@ -242,7 +242,7 @@ export default {
                     
                     if(x.message == "ok") {
                         alert("deleted");
-                        location.reload();
+                        this.$router.push('/')
                     }
                 }).catch(err =>{console.log(err)})
                 

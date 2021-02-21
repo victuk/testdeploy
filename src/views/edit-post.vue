@@ -53,7 +53,7 @@ export default {
             }).then((res) => res.json())
             .then((x) => {
                 if(x.message == 'ok') {
-                    location.replace('/');
+                    this.$router.replace('/')
                 }
                 console.log(x)
             }).catch(err => {console.log(err)})
