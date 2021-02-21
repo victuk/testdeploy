@@ -123,8 +123,8 @@ export default {
                         
                         
                         const userDetails = {blogdetails: blog, nbbody: blog.blogBody.slice(0, 130) + "...more", ownerName: x.user.name, ownerEmail:x.user.email};
-                    const ud = userDetails.slice().reverse()
-                    this.posts.push(ud)
+                    // const ud = userDetails.slice().reverse()
+                    this.posts.push(userDetails)
                   
                     
                     
