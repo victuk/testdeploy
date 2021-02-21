@@ -136,7 +136,7 @@ export default {
                         this.regsuccess = true;
                         setTimeout(() => {
                             this.regsuccess = false;
-                            location.reload();
+                            location.assign('/login');
                         }, 2000);
                     } else {
                         this.showregerror = true;
