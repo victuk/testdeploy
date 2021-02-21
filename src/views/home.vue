@@ -54,7 +54,7 @@
                 <div v-if="postSuccess" class="text-xs bg-green-200 text-green-800">Post successful</div>
             </div>
            <div v-once> {{ checkLogin() }}</div> 
-            <div v-for="item in posts.slice().reverse()" :key="item.blogdetails._id">
+            <div v-for="item in posts" :key="item.blogdetails._id">
                 
                 <div  class="text-left mb-2 mx-4 md:mx-20 hover:bg-blue-200 p-2 md:p-5 cursor-pointer rounded shadow bg-white">
                     <div class="text-sm">
@@ -123,7 +123,7 @@ export default {
                         
                         
                         const userDetails = {blogdetails: blog, nbbody: blog.blogBody.slice(0, 130) + "...more", ownerName: x.user.name, ownerEmail:x.user.email};
-                    this.posts.push(userDetails)
+                    this.posts.push(userDetails.slice().reverse())
                   
                     
                     
