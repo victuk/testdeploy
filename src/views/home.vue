@@ -177,7 +177,7 @@ export default {
                         this.postSuccess = false;
                         this.postTitle = '';
                         this.postBody = '';
-                        this.fetchPosts();
+                        location.reload();
                     }, 2000);
                 } else {
                     alert(x.message);
