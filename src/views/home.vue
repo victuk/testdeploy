@@ -204,7 +204,7 @@ export default {
         },
         logOut() {
             localStorage.removeItem('token');
-            this.$router.replace('/login');
+            this.$router.push('/login');
         },
         updateStatus2() {
 
@@ -231,7 +231,9 @@ export default {
             this.$router.push('/edit-post/' + key);
         },
         deleteSinglePost(key) {
+            
             const theval = confirm("Do you want to delete this post?");
+            return console.log(theval)
             if(theval) {
                 fetch(`${this.baseUrl}/${key}`, {
                     method: 'DELETE',
@@ -242,7 +244,7 @@ export default {
                     
                     if(x.message == "ok") {
                         alert("deleted");
-                        this.$router.push('/')
+                        location.reload();
                     }
                 }).catch(err =>{console.log(err)})
                 
