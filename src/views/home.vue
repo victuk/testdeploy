@@ -233,7 +233,7 @@ export default {
         deleteSinglePost(key) {
             
             const theval = confirm("Do you want to delete this post?");
-            return console.log(theval)
+            
             if(theval) {
                 fetch(`${this.baseUrl}/${key}`, {
                     method: 'DELETE',
