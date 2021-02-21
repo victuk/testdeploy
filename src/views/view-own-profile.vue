@@ -11,6 +11,7 @@
                         </div>
                         <div v-if="editStatus">
                             <textarea class="text-black p-1 border shadow resize-none" v-model="userProfile.status"></textarea>
+                            <br>
                             <button class="my-4 bg-blue-800 p-2 shadow rounded text-white" @click="updateStatus2()">Update Status</button>
                         </div>
 
