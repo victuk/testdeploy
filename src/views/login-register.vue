@@ -20,7 +20,7 @@
             </div>
             </div>
         </div>
-        <div v-if="!loginform" class="f-full overflow-auto">
+        <div v-if="!loginform" class="w-full overflow-auto">
             <div class="flex p-20 h-full overflow-auto">
             <div class="m-20 mt-100 border ml-auto mr-auto p-10 bg-white rounded h-full mb-40 w-80 overflow-auto">
                 <div class="text-center my-2">Registration Form</div>
