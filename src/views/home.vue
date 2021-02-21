@@ -43,7 +43,7 @@
             </div>
             
         </div>
-        <div class="flex-auto h-full overflow-auto">
+        <div class="flex-auto h-full py-40 overflow-auto">
             <div class="mx-4 md:mx-20 p-2 md:p-5 my-5 bg-white rounded shadow">
                 <div class="text-lg text-left sticky p-1">Post an article</div>
                 <div class="text-xs mt-2">Post Title</div>
