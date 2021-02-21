@@ -16,8 +16,8 @@ import Navbar from '../components/navbar.vue'
 export default {
     data() {
         return {
-            bloghead: '',
-            blogbody:'',
+            bloghead: 'Loading...',
+            blogbody:'Loading...',
             baseUrl: 'https://intense-temple-44969.herokuapp.com'
         }
     },

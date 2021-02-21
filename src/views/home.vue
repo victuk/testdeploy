@@ -232,7 +232,7 @@ export default {
             this.$router.push('/edit-post/' + key);
         },
         deleteSinglePost(key) {
-            
+            // return console.log(key)
             const theval = confirm("Do you want to delete this post?");
             
             if(theval) {
