@@ -1,7 +1,7 @@
 <template>
 <Navbar></Navbar>
     <div v-once>{{ fetchPosts() }}</div>
-    <div class="mt-8 flex fixed overflow-hidden w-full overflow-hidden bg-gray-200" style="height:32.5em!important">
+    <div class="mt-8 flex fixed overflow-hidden w-screen overflow-hidden bg-gray-200" style="height:32.5em!important">
         <div class=" md:w-64 md:block text-center h-auto bg-gray-800 text-white hidden">
             <div v-show="sidebar == 'links'" class="h-full flex flex-col mx-12 justify-center gap-y-4">
                 <button @click="showProfile()" class="text-left font-bold">Profile</button>
