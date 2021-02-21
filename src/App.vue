@@ -1,7 +1,7 @@
 <template>
 
 	<!--Container-->
-	<div class="bg-gray-100 w-full h-screen overflow-auto fixed my-10">
+	<div class="bg-gray-100 w-full h-full overflow-auto fixed my-10">
 
 		
 
