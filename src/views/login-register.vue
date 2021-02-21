@@ -136,7 +136,7 @@ export default {
                         this.regsuccess = true;
                         setTimeout(() => {
                             this.regsuccess = false;
-                            this.$router.push('/login')
+                            this.$router.replace('/login')
                         }, 2000);
                     } else {
                         this.showregerror = true;
