@@ -2,7 +2,7 @@
 <Navbar></Navbar>
     <div v-once>{{ fetchPosts() }}</div>
     <div class="mt-8 flex fixed overflow-hidden w-screen overflow-hidden bg-gray-200 h-screen">
-        <div class=" md:w-64 md:block text-center h-full bg-gray-800 text-white hidden">
+        <div class=" md:w-64 md:block text-center h-screen bg-gray-800 text-white hidden">
             <div v-show="sidebar == 'links'" class="h-full flex flex-col mx-12 justify-center gap-y-4">
                 <button @click="showProfile()" class="text-left font-bold">Profile</button>
             <!-- <button @click="showUsers()" class="text-left font-bold">Users</button> -->
@@ -43,7 +43,7 @@
             </div>
             
         </div>
-        <div class="flex-auto h-full overflow-auto">
+        <div class="flex-auto h-screen overflow-auto">
             <div class="mx-4 md:mx-20 p-2 md:p-5 my-5 bg-white rounded shadow">
                 <div class="text-lg text-left sticky p-1">Post an article</div>
                 <div class="text-xs mt-2">Post Title</div>
