@@ -101,7 +101,7 @@ export default {
                     this.loginSuccess = true
                     localStorage.setItem('token', x.token);
                     setTimeout(() => {
-                        location.assign('/')
+                        this.$router.push('Home')
                     }, 1000);
                 } else {
                     this.showerror = true;
@@ -136,7 +136,7 @@ export default {
                         this.regsuccess = true;
                         setTimeout(() => {
                             this.regsuccess = false;
-                            location.reload();
+                            this.$router.push('Login')
                         }, 2000);
                     } else {
                         this.showregerror = true;
