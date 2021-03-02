@@ -236,7 +236,7 @@ export default {
             const theval = confirm("Do you want to delete this post?");
             
             if(theval) {
-                fetch(`${this.baseUrl}/${key}`, {
+                fetch(`${this.baseUrl}/delete-single-blog/${key}`, {
                     method: 'DELETE',
                     headers: {
                     token: localStorage.getItem('token')
